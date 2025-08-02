@@ -2,10 +2,12 @@
 :root {
     --primary-color: #fd7e14;
     --secondary-color: #6c757d;
-    --light-bg: #f8f9fa;
+    --light-bg: #f5f5dc;
     --dark-bg: #212529;
     --text-dark: #343a40;
     --text-light: #6c757d;
+    --beige-bg: #f5f5dc;
+    --orange-accent: #fd7e14;
 }
 
 * {
@@ -19,11 +21,12 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
+    background-color: var(--beige-bg);
 }
 
 /* Navigation */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.95) !important;
+    background-color: rgba(245, 245, 220, 0.95) !important;
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -55,7 +58,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, var(--beige-bg) 0%, #e8e8d0 100%);
     padding-top: 80px;
     min-height: 100vh;
     display: flex;
@@ -67,6 +70,7 @@ body {
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    color: var(--text-dark);
 }
 
 .hero-image-small img {
@@ -109,6 +113,7 @@ body {
 .feature-card h6 {
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: var(--text-dark);
 }
 
 .feature-card small {
@@ -153,6 +158,7 @@ body {
 
 .location i {
     margin-right: 0.5rem;
+    color: var(--orange-accent);
 }
 
 .price {
@@ -511,5 +517,85 @@ section {
     .hero-section {
         min-height: auto;
         padding: 2rem 0;
+    }
+}
+
+/* Additional styles to match the design more closely */
+.bg-light {
+    background-color: var(--beige-bg) !important;
+}
+
+.text-warning {
+    color: var(--orange-accent) !important;
+}
+
+.btn-dark {
+    background-color: var(--text-dark) !important;
+    border-color: var(--text-dark) !important;
+}
+
+.btn-dark:hover {
+    background-color: #495057 !important;
+    border-color: #495057 !important;
+}
+
+/* Enhanced card styling */
+.destination-card {
+    border: none;
+    background: white;
+}
+
+.destination-card .card-body {
+    background: white;
+}
+
+/* Improved typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+}
+
+.lead {
+    color: var(--text-light);
+}
+
+/* Better spacing for sections */
+.py-5 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+/* Enhanced button styling */
+.btn {
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+/* Improved image containers */
+.img-hover-zoom {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-hover-zoom img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Better responsive behavior */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+    
+    .hero-content .lead {
+        font-size: 1.1rem;
+    }
+    
+    .feature-card {
+        margin-bottom: 1.5rem;
     }
 } 
